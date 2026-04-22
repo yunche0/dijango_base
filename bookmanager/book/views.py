@@ -14,3 +14,18 @@ def index(request):
             'name':'点击有惊喜'
     }
     return render(request,'book/index.html',context=context)
+
+from book.models import BookInfo
+
+book=BookInfo(
+    name='Django',
+    pub_date='2000-1-1',
+    readcount=10
+
+        )
+
+BookInfo.objects.create(
+        name='测试开发',
+        pub_date='2020-1-1',
+        readcount=100
+        )
